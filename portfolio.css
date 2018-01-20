@@ -1,0 +1,52 @@
+body{
+    background-color: darkblue;
+    color: white;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:18pt;
+}
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.navitem{
+    float: left;
+}
+
+
+.navitem a{
+    display: block;
+    padding: 8px;
+    background-color: gold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navitem a:hover{
+    background-color: white;
+}
+
+section{
+    display: flex;
+}
+
+aside{
+    flex: 1
+}
+
+article{
+    flex: 4
+}
+
+.rotate{
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
