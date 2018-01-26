@@ -1,10 +1,18 @@
+
 body{
-    background-color: darkblue;
-    color: white;
+   /* background-color: darkblue;
+    color: white;*/
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    color: purple;
 }
 
 p{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
     font-size:18pt;
 }
 .navbar{
@@ -22,15 +30,36 @@ p{
 .navitem a{
     display: block;
     padding: 8px;
-    background-color: gold;
     text-align: center;
     text-decoration: none;
+    color: purple;
 }
 
 .navitem a:hover{
-    background-color: white;
+    color: red;
 }
 
+.logo_base{
+    position: relative;
+    top: 10px;
+    width: 45px;
+}
+.logo_top{
+    position: absolute;
+    width: 37px;
+    top: 22px;
+    left: 14px;
+}
+
+.grid-container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+/*
 section{
     display: flex;
 }
@@ -40,13 +69,13 @@ aside{
 }
 
 article{
-    flex: 4
+    flex: 3
+}
+*/
+img{
+    width: 100%;
 }
 
-.rotate{
-    -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
+.big-picture{
+    width: 75%;
 }
