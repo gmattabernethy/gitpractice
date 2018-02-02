@@ -1,81 +1,86 @@
 
 body{
-   /* background-color: darkblue;
-    color: white;*/
+    background-color: grey;
+   
 }
 h1{
-    font-family: 'Montserrat', sans-serif;
+   color: rgba(255, 217, 0, 0.829);
+   position: relative;
+   left: 15px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 30pt;
 }
 
 h2{
-    color: purple;
+    color: royalblue;
 }
 
 p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
-    font-size:18pt;
-}
-.navbar{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: black;
-}
-
-.navitem{
-    float: left;
-}
-
-
-.navitem a{
-    display: block;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    color: purple;
-}
-
-.navitem a:hover{
-    color: red;
-}
-
-.logo_base{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:15pt;
     position: relative;
-    top: 10px;
-    width: 45px;
+    left: 5px;
 }
-.logo_top{
-    position: absolute;
-    width: 37px;
-    top: 22px;
-    left: 14px;
+
+form{
+    text-align: center;
+    align-self: flex-end;
+}
+
+.home{
+    color: white;
+    text-align: center;
+    align-self: flex-end;
+    font-size: 15pt;
+}
+
+.info{
+    position: relative;
+    text-align: end;
+    color: white;
+    font-size: 12pt;
+    right: 5px;
+}
+.slogan{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.textbox{
+    background-color: white;
+    height: 120px;
+}
+
+a:hover{
+    color: rgba(255, 217, 0, 0.829);
 }
 
 .grid-container{
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header";        
 }
 
-
-
-/*
-section{
-    display: flex;
+.head{
+    background-color: royalblue;
+    grid-area: header;
 }
 
-aside{
-    flex: 1
-}
-
-article{
-    flex: 3
-}
-*/
 img{
-    width: 100%;
+    width: 100%
+
 }
 
-.big-picture{
-    width: 75%;
+.display{
+    grid-area: main;
+}
+
+.center{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+        ". main ."
+        ". main .";
 }
