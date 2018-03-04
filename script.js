@@ -16,7 +16,10 @@ var app = new Vue({
     number: '',
     curWatch: {},
     loading:true,
-    watchname : ''
+    watchname : '',
+    buyers: {},
+    addedName: '',
+    creditCard: ''
   },
   created: function() {
     this.watchname = this.$route.params.id;
@@ -39,6 +42,18 @@ var app = new Vue({
             console.log("Loaded");
         })
         
-    },    
-  }
+    }, 
+    addComment: function() {
+       //console.log(this.addedName + ' ' + this.creditCard);
+       
+      if (!(this.number in this.buyers))
+        Vue.set(app.buyers, this.number, new Array);
+      var options = {year: 'numeric', month: 'long', day: 'numeric'};
+      var date = new Date();
+      this.buyers[this.number].push({buyer:date.toLocaleDateString('en-US', options) +': '+ this.addedName + ' bought a ' + this.curWatch.name + ' with CC# ' + this.creditCard});
+      this.addedName = '';
+      this.creditCard = '';
+    },
+  },
+   
 });

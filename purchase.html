@@ -40,11 +40,11 @@
             <div class="col col-md-6">
                 <fieldset>
                 <legend>Purchase this watch</legend>
-                <form>
+                <form v-on:submit.prevent="addComment">
                   <div class="form-row">                
                     <div class="form-group col-md-6">
                       <label for="customerName">Full Name</label>
-                      <input type="text" class="form-control" id="customerName" placeholder="Name" required>
+                      <input v-model="addedName" type="text" class="form-control" id="customerName" placeholder="Name" required>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Email</label>
@@ -75,7 +75,7 @@
                   <div class="form-row">
                       <div class="form-group col-md-8">
                         <label for="creditCard">Credit Card</label>
-                        <input type="text" class="form-control" id="creditCard" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                        <input v-model="creditCard" type="text" class="form-control" id="creditCard" placeholder="XXXX-XXXX-XXXX-XXXX" required>
                       </div>
                       <div class="form-group col-md-2">
                         <label for="MoYr">Mo/Yr</label>
@@ -92,12 +92,9 @@
                 </fieldset>
                 <br>
                 <div class="alert alert-dark"><b>Our Happy Customers</b></div>
-                <ul class="list-group" id="customers">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                </ul>
-                
-                
+                <ul v-for="b in buyers[number]" class="list-group" id="customers">
+                    <li class="list-group-item">{{b.buyer}}</li>
+                </ul>                
             </div>
             
         </div>
